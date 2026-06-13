@@ -1,20 +1,22 @@
 import 'package:flutter/material.dart';
 import 'loginPage.dart';
 
-
 void main() {
-  runApp(myApp());
+  runApp(const MyApp());
 }
 
-class myApp extends StatelessWidget {
-  myApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "Приложение++",
-      theme: ThemeData.dark(),
-      home: loginPage(),
+      title: 'Login App',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: const LoginPage(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
